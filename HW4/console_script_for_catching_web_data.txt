@@ -1,0 +1,9 @@
+var loss = []
+
+var iteration = []
+function t(){ 
+	loss.push($('#report').text().match(/(0\.\d+)/)[0]); 
+	iteration.push($('#report').text().match(/iteration: (\d+)/)[0]); 
+}
+
+setInterval(t, 200)
